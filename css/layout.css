@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pageHeader{
+    background: #0f1719;
+    color: #f0f0f5;
+    text-align: center;
+    padding: 50px;
+
+}
+
+main{
+    background-color: #0f1719;
+    color: #f0f0f5;
+}
+
+.gridContainer{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: black;
+    display: grid;
+    grid-template: auto / repeat(auto-fit, minmax(320px, 2fr));
+    grid-gap: 20px;
+}
+
+.gridElement{
+    width: 100%;
+    color: #f0f0f5;
+    background-color: #313133;
+    border: 10px solid #f0f0f5 ;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+}
+
+.visitSite{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: .6em;
+    background-color:#3e3d42 ;
+}
+
+.linksSiteCode{
+    color: #a5ccdf;
+}
+
+.linksSiteCode svg{
+    transition: .8s;
+}
+
+.linksSiteCode svg:hover{
+    fill: #f0f0f5;
+}
+
+.visitSite .linksSiteCode:first-child{
+    margin-right: 20px;
+}
+
+.gridElement header{
+    /* display: flex;
+    justify-content: center; */
+    height: 200px;
+    color: #f0f0f5;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 70px;
+    background-size: cover;
+    background-position: center;
+}
+
+.gridElement h3{
+    margin: 10px 0 15px 0;
+}
+
+.gridElement svg{
+    height: 35px;
+    width: 35px;
+    fill: #e15852;
+}
+
+.theDescription{
+    /* height: 150px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: #f0f0f5 2px dashed;
+    padding-bottom: 15px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    color: #a5ccdf;
+    margin: 0 40px 15px 40px;
+}
+
+.keyword{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #f0f0f5;
+    margin: 0 40px 15px 40px;
+    font-size: .8em;
+}
+
+@media (max-width:400px){
+    .gridContainer{
+        width: 100%;
+    }
+}
+
+@media (max-width:700px){
+    .gridElement a{
+        font-size: 1.2em;
+    }
+}
