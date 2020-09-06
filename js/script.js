@@ -1,4 +1,4 @@
-let array = ["../img/greenGarden.jpg", "../img/theBand.jpg", "../img/bear.jpg", "../img/earth.jpg", "../img/starwars.jpg","../img/immune.jpg"];
+let array = ["./img/greenGarden.jpg", "./img/theband.jpg", "./img/bear.jpg", "./img/earth.jpg", "./img/starwars.jpg","./img/immune.jpg"];
 
 let backgroundImage = document.querySelectorAll(".gridElement header");
 
