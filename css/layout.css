@@ -23,6 +23,17 @@ main{
     color: var(--light);
 }
 
+.headerContainer{
+    background-color: var(--light-dark);
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.headerTitle{
+    text-align: center;
+    padding-top: 13px;
+}
+
 .gridContainer{
     width: 80%;
     margin: 0 auto;
@@ -174,6 +185,9 @@ main{
 
     .presentation{
         padding-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
 
@@ -182,12 +196,12 @@ main{
         position: relative;
     }
 
-    .presentation p::after{
+    .presentation::after{
         content: "";
         background: url(../img/background.jpg);
         background-repeat:no-repeat;
         background-size: contain;
-        opacity: .15;
+        opacity: .05;
         position: absolute;
         top: 0;
         left: 0;
