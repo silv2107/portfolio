@@ -1,3 +1,5 @@
+@import "./header.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -5,24 +7,27 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.pageHeader{
-    background: #0f1719;
-    color: #f0f0f5;
-    text-align: center;
-    padding: 50px;
-
+:root{
+    --dark:#0f1719;
+    --light-dark:#313133;
+    --ligthest-dark:#3e3d42;
+    --light-bluish:#a5ccdf;
+    --light-red:#e15852;
+    --light:#f0f0f5;
 }
 
+
+/* main starts */
 main{
-    background-color: #0f1719;
-    color: #f0f0f5;
+    background-color: var(--dark);
+    color: var(--light);
 }
 
 .gridContainer{
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 20px;
-    background-color: black;
+    padding-bottom: 50px;
+    background-color: var(--dark);
     display: grid;
     grid-template: auto / repeat(auto-fit, minmax(320px, 2fr));
     grid-gap: 20px;
@@ -30,9 +35,9 @@ main{
 
 .gridElement{
     width: 100%;
-    color: #f0f0f5;
-    background-color: #313133;
-    border: 10px solid #f0f0f5 ;
+    color: var(--light);
+    background-color: var(--light-dark);
+    border: 10px solid var(--light);
     display: flex;
     flex-direction: column;
     font-size: 1.1em;
@@ -43,11 +48,11 @@ main{
     justify-content: center;
     padding-top: 10px;
     font-size: .6em;
-    background-color:#3e3d42 ;
+    background-color:var(--ligthest-dark);
 }
 
 .linksSiteCode{
-    color: #a5ccdf;
+    color: var(--light-bluish);
 }
 
 .linksSiteCode svg{
@@ -55,7 +60,7 @@ main{
 }
 
 .linksSiteCode svg:hover{
-    fill: #f0f0f5;
+    fill: var(--light);
 }
 
 .visitSite .linksSiteCode:first-child{
@@ -63,10 +68,8 @@ main{
 }
 
 .gridElement header{
-    /* display: flex;
-    justify-content: center; */
     height: 200px;
-    color: #f0f0f5;
+    color: var(--light);
     font-size: 2em;
     text-align: center;
     padding-top: 70px;
@@ -81,7 +84,7 @@ main{
 .gridElement svg{
     height: 35px;
     width: 35px;
-    fill: #e15852;
+    fill: var(--light-red);
 }
 
 .theDescription{
@@ -90,14 +93,14 @@ main{
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-bottom: #f0f0f5 2px dashed;
+    border-bottom: var(--light) 2px dashed;
     padding-bottom: 15px;
 }
 
 .skills{
     display: flex;
     justify-content: space-between;
-    color: #a5ccdf;
+    color: var(--light-bluish);
     margin: 0 40px 15px 40px;
 }
 
@@ -105,7 +108,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: #f0f0f5;
+    color: var(--light);
     margin: 0 40px 15px 40px;
     font-size: .8em;
 }
@@ -116,8 +119,103 @@ main{
     }
 }
 
-@media (max-width:700px){
-    .gridElement a{
-        font-size: 1.2em;
+@media (min-width:500px){
+    .headerNav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .pageHeaderName{
+        padding-top: 100px;
+    }
+
+    .headerWrapper{
+        height: auto;
     }
 }
+
+@media (min-width:700px){
+    .pageHeaderName{
+        padding-top: 10vh;
+        margin: 0 auto;
+    }
+
+    .presentation p{
+        font-size: 1.3em;
+    }
+
+    .presentTechnologies{
+        padding-top: 50px;
+    }
+
+    
+}
+
+@media (min-width:1000px){
+    .pageHeaderName{
+        font-size: .6em;
+        margin-bottom: 50px;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .pageHeaderName h1{
+        font-size: 5em;
+    }
+
+    .pageHeaderName img{
+        display: none;
+    }
+
+    .presentTechnologies{
+        padding-top: 10px;
+    }
+
+    .presentation{
+        padding-bottom: 0px;
+
+    }
+
+    .presentation p{
+        width: 50%;
+        position: relative;
+    }
+
+    .presentation p::after{
+        content: "";
+        background: url(../img/background.jpg);
+        background-repeat:no-repeat;
+        background-size: contain;
+        opacity: .15;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+
+    .presentation img{
+        width: 25%;
+    }
+
+
+
+    
+}
+
+@media (min-width:1200px){
+    .pageHeaderName h1{
+        font-size: 5.5em;
+    }
+
+    .pageHeaderName h2{
+        font-size: 3em;
+    }
+
+    
+}
+
+
