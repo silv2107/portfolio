@@ -13,6 +13,7 @@
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 2;
 }
 
 .headerNav a{
@@ -49,6 +50,8 @@
 
 .pageHeaderName h1{
     font-size: 6vw;
+    font-style: italic;
+    font-weight: bolder;
 }
 
 .pageHeaderName h2{
@@ -69,8 +72,8 @@
 }
 
 .presentation p{
-    font-size: 3vw;
-    color: var(--light-bluish);
+    font-size: 3.2vw;
+    color: var(--light);
 }
 
 .presentTechnologies{
