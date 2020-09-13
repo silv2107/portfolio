@@ -25,13 +25,16 @@ main{
 
 .headerContainer{
     background-color: var(--light-dark);
-    height: 50px;
-    margin-bottom: 15px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 15px; */
 }
 
 .headerTitle{
     text-align: center;
-    padding-top: 13px;
+    /* padding-top: 13px; */
 }
 
 .gridContainer{
